@@ -1,1 +1,1 @@
-# SimpleFactoryPattrens
+# SimpleFactoryPatterns
