@@ -18,18 +18,21 @@
     <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="FactoryPattern\Factory.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FactoryPattern\Product.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractFactoryPattern\AbstractFactory.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractFactoryPattern\AbstractProduct.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
     <ClInclude Include="FactoryPattern\Factory.h">
       <Filter>资源文件</Filter>
     </ClInclude>
     <ClInclude Include="FactoryPattern\Product.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonPattern\Single.h">
       <Filter>资源文件</Filter>
     </ClInclude>
   </ItemGroup>

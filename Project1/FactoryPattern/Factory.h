@@ -1,19 +1,41 @@
 #pragma once
 #include "Product.h"
-//工厂基类
+#include <string>
+
+//工厂
 class Factory {
     public:
-        virtual ~Factory()=0;
-        virtual Product* createProduct() = 0;
-    protected:
         Factory(){};
+        ~Factory(){};
+        Product* createProduct1() {
+            return new ConreteProduct1;
+        }
+        Product* createProduct2() {
+            return new ConreteProduct2;
+        }
+        Product* createProduct3() {
+            return new ConreteProduct3;
+        }
 };
 
-//工厂所需要产出的结果,具体工厂类
-class ConreteFactory : public Factory {
-    public:
-        ConreteFactory();
-        ~ConreteFactory();
-        Product* createProduct();
+//工厂
+class Factory {
+public:
+    Factory() {};
+    ~Factory() {};
+    Product* createProduct1(const std::string& product_key_) {
+        if(product_key_ == "Product1"){
+            return new ConreteProduct1;
+        }
+        if (product_key_ == "Product2") {
+            return new ConreteProduct2;
+        }
+        if (product_key_ == "Product3") {
+            return new ConreteProduct3;
+        }
+    }
 };
+
+
+
 
