@@ -17,16 +17,17 @@ public:
 
 class Decorator{
 public:
+    Decorator(Component* com_) {com_->m_decorator = this;};
+    Decorator(Decorator* dec_) {dec_->m_decorator = this; };
+    virtual ~Decorator() {};
     virtual void operation() = 0;
-    void addedBehavior(Decorator * decorator_){
-        m_decorator = decorator_;
-    }
 protected:
     Decorator * m_decorator;
 };
 class ConcreteDecoratorA :public Decorator {
 public:
-    ConcreteDecoratorA() {};
+    ConcreteDecoratorA(Component* com_):Decorator(com_) {};
+    ConcreteDecoratorA(Decorator* dec_):Decorator(dec_) {};
     ~ConcreteDecoratorA() {};
     void operation() {
         /*dosth*/
@@ -37,7 +38,8 @@ public:
 };
 class ConcreteDecoratorB :public Decorator {
 public:
-    ConcreteDecoratorB() {};
+    ConcreteDecoratorB(Component* com_) :Decorator(com_) {};
+    ConcreteDecoratorB(Decorator* dec_) :Decorator(dec_) {};
     ~ConcreteDecoratorB() {};
     void operation() {
         /*dosth*/
@@ -50,11 +52,9 @@ public:
 
 int main(){
     Component* _com = new ConcreteComponent();
-    Decorator* _dec_a = new ConcreteDecoratorA();
-    _com->m_decorator = _dec_a;
-    Decorator* _dec_b = new ConcreteDecoratorB();
-    _dec_a->addedBehavior(_dec_b);
-
+    Decorator* _dec_a = new ConcreteDecoratorA(_com);
+    Decorator* _dec_b = new ConcreteDecoratorB(_dec_a);
     _com->operation();
     return 0;
 }
+
