@@ -35,5 +35,14 @@
     <ClInclude Include="SingletonPattern\Single.h">
       <Filter>资源文件</Filter>
     </ClInclude>
+    <ClInclude Include="Bridge\Bridge.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Adapter\Adapter.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Decorator\Decorator.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

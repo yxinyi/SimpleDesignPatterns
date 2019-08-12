@@ -120,6 +120,9 @@
   <ItemGroup>
     <ClInclude Include="AbstractFactoryPattern\AbstractFactory.h" />
     <ClInclude Include="AbstractFactoryPattern\AbstractProduct.h" />
+    <ClInclude Include="Adapter\Adapter.h" />
+    <ClInclude Include="Bridge\Bridge.h" />
+    <ClInclude Include="Decorator\Decorator.h" />
     <ClInclude Include="FactoryPattern\Factory.h" />
     <ClInclude Include="FactoryPattern\Product.h" />
     <ClInclude Include="SingletonPattern\Single.h" />
